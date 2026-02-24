@@ -1,1 +1,2 @@
-console.log("Webpack is working!");
+import { loadHomePage } from "./homepage.js";
+loadHomePage();
