@@ -7,7 +7,7 @@ import { loadContactPage } from "./contact.js";
 loadHomePage();
 
 //get all nav buttons
-const homeBtn = document.querySelector("button:nth-child(1");
+const homeBtn = document.querySelector("button:nth-child(1)");
 const aboutBtn = document.querySelector("button:nth-child(2)");
 const menuBtn = document.querySelector("button:nth-child(3)");
 const contactBtn = document.querySelector("button:nth-child(4)");

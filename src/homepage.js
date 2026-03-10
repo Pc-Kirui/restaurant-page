@@ -1,30 +1,31 @@
+function createSection(title) {
+  const div = document.createElement("div");
+  const heading = document.createElement("h2");
+  heading.textContent = title;
+  div.appendChild(heading);
+  return div;
+}
+
 export function loadHomePage() {
-  console.log("Webpack is working!");
   const content = document.getElementById("content");
 
   const heading = document.createElement("h1");
   heading.textContent = "Welcome to TenWeeks Breakfast Lounge!";
   content.appendChild(heading);
 
-  const goldilocksdiv = document.createElement("div");
-  // const para = document.createElement("p");
-  // para.textContent =
-  //   "TenWeeks's has the best tea and porridge! The atmosphere and customer service make you feel like you are sitting in the middle of the woods, eating like a bear! This is exactly the kind of place that I like to return to again and again.";
+  //Quote Section
+  const quoteDiv = document.createElement("div");
   const quote = document.createElement("blockquote");
   quote.textContent =
     "TenWeeks Breakfast Lounge is a hidden gem for breakfast lovers!";
   const strong = document.createElement("strong");
   strong.textContent = " - A satisfied customer";
+  quoteDiv.appendChild(quote);
+  quoteDiv.appendChild(strong);
+  content.appendChild(quoteDiv);
 
-  // goldilocksdiv.appendChild(para);
-  goldilocksdiv.appendChild(quote);
-  goldilocksdiv.appendChild(strong);
-  content.appendChild(goldilocksdiv);
-
-  const openingHoursDiv = document.createElement("div");
-  const openingHoursHeading = document.createElement("h2");
-  openingHoursHeading.textContent = "Opening Hours";
-  openingHoursDiv.appendChild(openingHoursHeading);
+  // Opening Hours Section
+  const openingHoursDiv = createSection("Opening Hours");
 
   const openingHoursList = document.createElement("ul");
   const days = [
@@ -43,17 +44,28 @@ export function loadHomePage() {
     openingHoursList.appendChild(listItem);
   });
   openingHoursDiv.appendChild(openingHoursList);
-
   content.appendChild(openingHoursDiv);
 
-  const locationDiv = document.createElement("div");
-  const locationHeading = document.createElement("h2");
-  locationHeading.textContent = "Location";
-  locationDiv.appendChild(locationHeading);
+  // Location Section
+  const locationDiv = createSection("Location");
+
+  const locationImage = document.createElement("img");
+  locationImage.src =
+    "https://images.unsplash.com/photo-1525824236856-8c0a31dfe3be?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  locationImage.alt =
+    "Scenic view of Tenwek Waterfalls near the Ten Weeks Lounge in Bomet County";
+  locationImage.style.width = "100%";
+  locationImage.style.maxWidth = "600px";
+  locationDiv.appendChild(locationImage);
 
   const paraLocation = document.createElement("p");
   paraLocation.textContent = "123 Tenwek, Bomet County, Kenya";
   locationDiv.appendChild(paraLocation);
+
+  const descriptionLocation = document.createElement("p");
+  descriptionLocation.textContent =
+    "Nestled in the heart of Tenwek, Bomet County, our restaurant offers more than just a meal — it offers a view. Surrounded by the lush green highlands and just a short distance from the breathtaking Tenwek Waterfalls, our location provides a peaceful escape from the busy world. Enjoy your breakfast while taking in the fresh countryside air and serene natural scenery. Whether you're a local resident or visiting from out of town, we invite you to relax, unwind, and experience great food in a truly scenic setting.";
+  locationDiv.appendChild(descriptionLocation);
 
   content.appendChild(locationDiv);
 }
