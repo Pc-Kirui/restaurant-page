@@ -1,3 +1,5 @@
+import "./styles/main.css";
+
 import { loadHomePage } from "./homepage.js";
 import { loadAboutPage } from "./about.js";
 import { loadMenuPage } from "./menu.js";
@@ -18,23 +20,36 @@ function clearContent() {
   content.innerHTML = "";
 }
 
+//Helper function
+function setActiveButton(activeBtn) {
+  const buttons = document.querySelectorAll("nav button");
+  buttons.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+  activeBtn.classList.add("active");
+}
+
 //add event listeners to buttons
 homeBtn.addEventListener("click", () => {
   clearContent();
   loadHomePage();
+  setActiveButton(homeBtn);
 });
 
 aboutBtn.addEventListener("click", () => {
   clearContent();
   loadAboutPage();
+  setActiveButton(aboutBtn);
 });
 
 menuBtn.addEventListener("click", () => {
   clearContent();
   loadMenuPage();
+  setActiveButton(menuBtn);
 });
 
 contactBtn.addEventListener("click", () => {
   clearContent();
   loadContactPage();
+  setActiveButton(contactBtn);
 });

@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --forest-green: #4a7c59;
+  --warm-cream: #f5f0e8;
+  --dark-brown: #3b2f2f;
+  --warm-brown: #7a5c3a;
+}
+
+body {
+  font-family: "Georgia", serif;
+  background-color: var(--warm-cream);
+  color: var(--dark-brown);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--forest-green);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav button {
+  background-color: transparent;
+  color: var(--warm-cream);
+  border: 2px solid var(--warm-cream);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background-color: var(--warm-cream);
+  color: var(--forest-green);
+}
+
+nav button.active {
+  background-color: var(--warm-cream);
+  font-weight: bold;
+  color: var(--forest-green);
+}
+
+#content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--forest-green);
+  margin-block-end: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--warm-brown);
+  margin: 1.5rem 0 0.5rem;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+blockquote {
+  border-left: 4px solid var(--forest-green);
+  font-style: italic;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background-color: rgba(74, 124, 89, 0.1);
+  border-radius: 0 8px 8px 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 1rem 0;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(74, 124, 89, 0.2);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  nav button {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  #content {
+    padding: 0 0.8rem;
+  }
+}

@@ -15,6 +15,7 @@ export function loadHomePage() {
 
   //Quote Section
   const quoteDiv = document.createElement("div");
+  quoteDiv.classList.add("section");
   const quote = document.createElement("blockquote");
   quote.textContent =
     "TenWeeks Breakfast Lounge is a hidden gem for breakfast lovers!";
@@ -26,6 +27,7 @@ export function loadHomePage() {
 
   // Opening Hours Section
   const openingHoursDiv = createSection("Opening Hours");
+  openingHoursDiv.classList.add("section");
 
   const openingHoursList = document.createElement("ul");
   const days = [
@@ -48,6 +50,7 @@ export function loadHomePage() {
 
   // Location Section
   const locationDiv = createSection("Location");
+  locationDiv.classList.add("section");
 
   const locationImage = document.createElement("img");
   locationImage.src =

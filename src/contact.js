@@ -1,23 +1,58 @@
+import "./styles/contact.css";
+
 export function loadContactPage() {
   const content = document.getElementById("content");
-  const contactInfoDiv = document.createElement("div");
+  // const contactInfoDiv = document.createElement("div");
 
   const heading = document.createElement("h1");
   heading.textContent = "Contact Us";
+  heading.classList.add("contact-heading");
+  content.appendChild(heading);
 
-  const phonePara = document.createElement("p");
-  phonePara.textContent = "Phone: +254 123 456 789";
+  const subheading = document.createElement("p");
+  subheading.textContent =
+    "We'd love to hear from you. Visit us or reach out anytime!";
+  subheading.classList.add("contact-subheading");
+  content.appendChild(subheading);
 
-  const emailPara = document.createElement("p");
-  emailPara.textContent = "Email: tenweekslounge@gmail.com";
+  const card = document.createElement("div");
+  card.classList.add("contact-card");
 
-  const addressPara = document.createElement("p");
-  addressPara.textContent = "Address: 123 Tenwek, Bomet County, Kenya";
+  const contacts = [
+    { icon: "📞", label: "Phone", value: "+254 123 456 789" },
+    { icon: "✉️", label: "Email", value: "tenweekslounge@gmail.com" },
+    { icon: "📍", label: "Address", value: "123 Tenwek, Bomet County, Kenya" },
+    {
+      icon: "🕐",
+      label: "Hours",
+      value: "Mon – Fri: 6am–10pm | Sat – Sun: 8am–10pm",
+    },
+  ];
 
-  contactInfoDiv.appendChild(heading);
-  contactInfoDiv.appendChild(phonePara);
-  contactInfoDiv.appendChild(emailPara);
-  contactInfoDiv.appendChild(addressPara);
+  contacts.forEach(({ icon, label, value }) => {
+    const row = document.createElement("div");
+    row.classList.add("contact-row");
 
-  content.appendChild(contactInfoDiv);
+    const iconSpan = document.createElement("span");
+    iconSpan.textContent = icon;
+    iconSpan.classList.add("contact-icon");
+
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("contact-text");
+
+    const labelEl = document.createElement("strong");
+    labelEl.textContent = label;
+    labelEl.classList.add("contact-label");
+
+    const valueEl = document.createElement("p");
+    valueEl.textContent = value;
+    valueEl.classList.add("contact-value");
+
+    textDiv.appendChild(labelEl);
+    textDiv.appendChild(valueEl);
+    row.appendChild(iconSpan);
+    row.appendChild(textDiv);
+    card.appendChild(row);
+  });
+  content.appendChild(card);
 }

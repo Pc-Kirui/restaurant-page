@@ -1,0 +1,23 @@
+.about-image {
+  width: 100%;
+  max-width: 700px;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  margin: 1.5rem auto;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: var(--dark-brown);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+.about-heading {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}

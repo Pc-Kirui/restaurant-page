@@ -1,0 +1,52 @@
+.contact-heading {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+.contact-subheading {
+  text-align: center;
+  color: var(--warm-brown);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem 2rem 0.5rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(74, 124, 89, 0.15);
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.contact-label {
+  color: var(--forest-green);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.contact-value {
+  color: var(--dark-brown);
+  margin: 0;
+}

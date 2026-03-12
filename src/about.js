@@ -1,11 +1,15 @@
+import "./styles/about.css";
+
 export function loadAboutPage() {
   const content = document.getElementById("content");
 
   const heading = document.createElement("h1");
+  heading.classList.add("about-heading");
   heading.textContent = "About Us";
   content.appendChild(heading);
 
   const image = document.createElement("img");
+  image.classList.add("about-image");
   image.src =
     "https://cdn.pixabay.com/photo/2020/01/09/18/59/hotel-4753669_1280.jpg";
   image.alt = "Hotel interior with tables and chairs";
@@ -23,6 +27,7 @@ export function loadAboutPage() {
   descriptions.forEach((text) => {
     const para = document.createElement("p");
     para.textContent = text;
+    para.classList.add("about-description");
     content.appendChild(para);
   });
 }
