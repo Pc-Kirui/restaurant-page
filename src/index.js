@@ -53,3 +53,12 @@ contactBtn.addEventListener("click", () => {
   loadContactPage();
   setActiveButton(contactBtn);
 });
+
+// Hero button switches to menu page
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("hero-btn")) {
+    clearContent();
+    loadMenuPage();
+    setActiveButton(menuBtn);
+  }
+});

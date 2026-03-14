@@ -13,6 +13,10 @@
   --warm-brown: #7a5c3a;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Georgia", serif;
   background-color: var(--warm-cream);
@@ -48,15 +52,14 @@ nav button {
   transition: all 0.3s ease;
 }
 
-nav button:hover {
+nav button:hover,
+nav button.active {
   background-color: var(--warm-cream);
   color: var(--forest-green);
 }
 
 nav button.active {
-  background-color: var(--warm-cream);
   font-weight: bold;
-  color: var(--forest-green);
 }
 
 #content {
@@ -66,20 +69,17 @@ nav button.active {
 }
 
 h1 {
+  font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   color: var(--forest-green);
   margin-block-end: 1rem;
 }
 
 h2 {
+  font-family: "Playfair Display", serif;
   font-size: 1.5rem;
   color: var(--warm-brown);
   margin: 1.5rem 0 0.5rem;
-}
-
-h1,
-h2 {
-  font-family: "Playfair Display", serif;
 }
 
 .section {
@@ -125,6 +125,55 @@ li:last-child {
   border-bottom: none;
 }
 
+footer {
+  background-color: var(--forest-green);
+  color: var(--warm-cream);
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1.5rem 2rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-credits {
+  text-align: left;
+}
+
+.footer-developer {
+  text-align: right;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 0.4rem;
+}
+
+footer p {
+  margin-bottom: 0.3rem;
+}
+
+footer a {
+  color: var(--warm-cream);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(245, 240, 232, 0.4);
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   h1 {
@@ -133,6 +182,20 @@ li:last-child {
 
   #content {
     padding: 0 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-developer {
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 }
 
@@ -152,5 +215,17 @@ li:last-child {
 
   #content {
     padding: 0 0.8rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-links {
+    font-size: 0.8rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
