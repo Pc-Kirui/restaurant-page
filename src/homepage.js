@@ -1,4 +1,5 @@
 import "./styles/homepage.css";
+import waterfallImg from "./assets/waterfall_unsplash.jpg";
 
 function createSection(title) {
   const div = document.createElement("div");
@@ -74,8 +75,7 @@ export function loadHomePage() {
 
   const locationImage = document.createElement("img");
   locationImage.classList.add("location-image");
-  locationImage.src =
-    "https://images.unsplash.com/photo-1525824236856-8c0a31dfe3be?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  locationImage.src = waterfallImg;
   locationImage.alt =
     "Scenic view of Tenwek Waterfalls near the Ten Weeks Lounge in Bomet County";
   locationImage.style.width = "100%";

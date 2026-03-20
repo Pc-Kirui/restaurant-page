@@ -1,4 +1,5 @@
 import "./styles/about.css";
+import hotelImg from "./assets/reinhardthrainer-hotel.jpg";
 
 export function loadAboutPage() {
   const content = document.getElementById("content");
@@ -10,8 +11,7 @@ export function loadAboutPage() {
 
   const image = document.createElement("img");
   image.classList.add("about-image");
-  image.src =
-    "https://cdn.pixabay.com/photo/2020/01/09/18/59/hotel-4753669_1280.jpg";
+  image.src = hotelImg;
   image.alt = "Hotel interior with tables and chairs";
   image.style.width = "100%";
   image.style.maxWidth = "600px";
